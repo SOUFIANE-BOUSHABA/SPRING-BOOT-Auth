@@ -1,6 +1,6 @@
-package com.helloIftekhar.springJwt.repository;
+package com.boushaba.springJwt.repository;
 
-import com.helloIftekhar.springJwt.model.Token;
+import com.boushaba.springJwt.model.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,4 +1,4 @@
-package com.helloIftekhar.springJwt.model;
+package com.boushaba.springJwt.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

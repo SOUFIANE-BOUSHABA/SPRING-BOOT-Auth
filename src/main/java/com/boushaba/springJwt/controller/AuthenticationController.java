@@ -1,8 +1,8 @@
-package com.helloIftekhar.springJwt.controller;
+package com.boushaba.springJwt.controller;
 
-import com.helloIftekhar.springJwt.model.AuthenticationResponse;
-import com.helloIftekhar.springJwt.model.User;
-import com.helloIftekhar.springJwt.service.AuthenticationService;
+import com.boushaba.springJwt.model.AuthenticationResponse;
+import com.boushaba.springJwt.model.User;
+import com.boushaba.springJwt.service.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.ResponseEntity;

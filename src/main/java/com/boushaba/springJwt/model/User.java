@@ -1,4 +1,4 @@
-package com.helloIftekhar.springJwt.model;
+package com.boushaba.springJwt.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

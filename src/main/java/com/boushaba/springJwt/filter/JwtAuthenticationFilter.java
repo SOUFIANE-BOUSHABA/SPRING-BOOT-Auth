@@ -1,8 +1,8 @@
-package com.helloIftekhar.springJwt.filter;
+package com.boushaba.springJwt.filter;
 
 
-import com.helloIftekhar.springJwt.service.JwtService;
-import com.helloIftekhar.springJwt.service.UserDetailsServiceImp;
+import com.boushaba.springJwt.service.JwtService;
+import com.boushaba.springJwt.service.UserDetailsServiceImp;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

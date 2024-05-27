@@ -1,11 +1,11 @@
-package com.helloIftekhar.springJwt.service;
+package com.boushaba.springJwt.service;
 
 
-import com.helloIftekhar.springJwt.model.AuthenticationResponse;
-import com.helloIftekhar.springJwt.model.Token;
-import com.helloIftekhar.springJwt.model.User;
-import com.helloIftekhar.springJwt.repository.TokenRepository;
-import com.helloIftekhar.springJwt.repository.UserRepository;
+import com.boushaba.springJwt.model.AuthenticationResponse;
+import com.boushaba.springJwt.model.Token;
+import com.boushaba.springJwt.model.User;
+import com.boushaba.springJwt.repository.TokenRepository;
+import com.boushaba.springJwt.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpHeaders;

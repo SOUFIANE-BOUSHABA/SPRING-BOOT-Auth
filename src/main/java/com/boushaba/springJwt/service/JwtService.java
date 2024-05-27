@@ -1,7 +1,7 @@
-package com.helloIftekhar.springJwt.service;
+package com.boushaba.springJwt.service;
 
-import com.helloIftekhar.springJwt.model.User;
-import com.helloIftekhar.springJwt.repository.TokenRepository;
+import com.boushaba.springJwt.model.User;
+import com.boushaba.springJwt.repository.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;

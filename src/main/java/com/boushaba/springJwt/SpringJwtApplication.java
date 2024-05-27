@@ -1,4 +1,4 @@
-package com.helloIftekhar.springJwt;
+package com.boushaba.springJwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.helloIftekhar.springJwt.config;
+package com.boushaba.springJwt.config;
 
-import com.helloIftekhar.springJwt.model.Token;
-import com.helloIftekhar.springJwt.repository.TokenRepository;
+import com.boushaba.springJwt.model.Token;
+import com.boushaba.springJwt.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Configuration;

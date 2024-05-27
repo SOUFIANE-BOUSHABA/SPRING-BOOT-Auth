@@ -1,8 +1,8 @@
-package com.helloIftekhar.springJwt.config;
+package com.boushaba.springJwt.config;
 
 
-import com.helloIftekhar.springJwt.filter.JwtAuthenticationFilter;
-import com.helloIftekhar.springJwt.service.UserDetailsServiceImp;
+import com.boushaba.springJwt.filter.JwtAuthenticationFilter;
+import com.boushaba.springJwt.service.UserDetailsServiceImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
