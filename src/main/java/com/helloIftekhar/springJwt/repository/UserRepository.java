@@ -1,6 +1,6 @@
-package digiload.repository;
+package com.helloIftekhar.springJwt.repository;
 
-import digiload.model.User;
+import com.helloIftekhar.springJwt.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

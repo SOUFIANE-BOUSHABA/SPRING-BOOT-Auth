@@ -1,7 +1,7 @@
-package digiload.service;
+package com.helloIftekhar.springJwt.service;
 
-import digiload.model.User;
-// import digiload.repository.TokenRepository;
+import com.helloIftekhar.springJwt.model.User;
+import com.helloIftekhar.springJwt.repository.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -27,23 +27,45 @@ public class JwtService {
     private long refreshTokenExpire;
 
 
-    public boolean isValid(String token, UserDetails user) {
-        String username = extractUsername(token);
+    private final TokenRepository tokenRepository;
 
-        return username.equals(user.getUsername()) && !isTokenExpired(token);
-    }
-
-    public boolean isTokenExpired(String token) {
-        return  extractExpiration(token).before(new Date());
-         
-    }
-
-    private Date extractExpiration(String token) {
-        return extractClaim(token, Claims::getExpiration);
+    public JwtService(TokenRepository tokenRepository) {
+        this.tokenRepository = tokenRepository;
     }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
+    }
+
+
+    public boolean isValid(String token, UserDetails user) {
+        String username = extractUsername(token);
+
+        boolean validToken = tokenRepository
+                .findByAccessToken(token)
+                .map(t -> !t.isLoggedOut())
+                .orElse(false);
+
+        return (username.equals(user.getUsername())) && !isTokenExpired(token) && validToken;
+    }
+
+    public boolean isValidRefreshToken(String token, User user) {
+        String username = extractUsername(token);
+
+        boolean validRefreshToken = tokenRepository
+                .findByRefreshToken(token)
+                .map(t -> !t.isLoggedOut())
+                .orElse(false);
+
+        return (username.equals(user.getUsername())) && !isTokenExpired(token) && validRefreshToken;
+    }
+
+    private boolean isTokenExpired(String token) {
+        return extractExpiration(token).before(new Date());
+    }
+
+    private Date extractExpiration(String token) {
+        return extractClaim(token, Claims::getExpiration);
     }
 
     public <T> T extractClaim(String token, Function<Claims, T> resolver) {
@@ -59,12 +81,22 @@ public class JwtService {
                 .parseSignedClaims(token)
                 .getPayload();
     }
-    private String generateToken(User user) {
+
+
+    public String generateAccessToken(User user) {
+        return generateToken(user, accessTokenExpire);
+    }
+
+    public String generateRefreshToken(User user) {
+        return generateToken(user, refreshTokenExpire );
+    }
+
+    private String generateToken(User user, long expireTime) {
         String token = Jwts
                 .builder()
                 .subject(user.getUsername())
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
+                .expiration(new Date(System.currentTimeMillis() + expireTime ))
                 .signWith(getSigninKey())
                 .compact();
 
