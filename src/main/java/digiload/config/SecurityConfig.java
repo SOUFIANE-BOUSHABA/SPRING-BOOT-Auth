@@ -1,8 +1,9 @@
-package com.boushaba.springJwt.config;
+package digiload.config;
 
 
-import com.boushaba.springJwt.filter.JwtAuthenticationFilter;
-import com.boushaba.springJwt.service.UserDetailsServiceImp;
+
+import digiload.filter.JwtAuthenticationFilter;
+import digiload.service.UserDetailsServiceImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;

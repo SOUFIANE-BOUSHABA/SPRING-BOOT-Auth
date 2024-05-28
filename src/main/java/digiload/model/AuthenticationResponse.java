@@ -1,4 +1,4 @@
-package com.boushaba.springJwt.model;
+package digiload.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -15,6 +15,11 @@ public class AuthenticationResponse {
     public AuthenticationResponse(String accessToken, String refreshToken, String message) {
         this.accessToken = accessToken;
         this.message = message;
+        this.refreshToken = refreshToken;
+    }
+
+    public AuthenticationResponse(String accessToken, String refreshToken) {
+        this.accessToken = accessToken;
         this.refreshToken = refreshToken;
     }
 

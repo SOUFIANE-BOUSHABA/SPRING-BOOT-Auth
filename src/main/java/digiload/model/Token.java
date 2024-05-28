@@ -1,5 +1,4 @@
-package com.boushaba.springJwt.model;
-
+package digiload.model;
 
 import jakarta.persistence.*;
 

@@ -1,7 +1,7 @@
-package com.boushaba.springJwt.config;
+package digiload.config;
 
-import com.boushaba.springJwt.model.Token;
-import com.boushaba.springJwt.repository.TokenRepository;
+import digiload.model.Token;
+import digiload.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Configuration;

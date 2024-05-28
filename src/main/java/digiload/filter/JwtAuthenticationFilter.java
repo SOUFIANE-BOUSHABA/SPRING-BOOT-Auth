@@ -1,8 +1,8 @@
-package com.boushaba.springJwt.filter;
+package digiload.filter;
 
 
-import com.boushaba.springJwt.service.JwtService;
-import com.boushaba.springJwt.service.UserDetailsServiceImp;
+import digiload.service.JwtService;
+import digiload.service.UserDetailsServiceImp;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

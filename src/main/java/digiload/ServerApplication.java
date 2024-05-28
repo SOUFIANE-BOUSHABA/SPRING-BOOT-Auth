@@ -1,13 +1,17 @@
-package com.boushaba.springJwt;
+package digiload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringJwtApplication {
+public class ServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringJwtApplication.class, args);
+		SpringApplication.run(ServerApplication.class, args);
 	}
 
+
+
+
+	
 }

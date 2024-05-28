@@ -1,4 +1,4 @@
-package com.boushaba.springJwt.model;
+package digiload.model;
 
 public enum Role {
     USER,

@@ -1,6 +1,6 @@
-package com.boushaba.springJwt.service;
+package digiload.service;
 
-import com.boushaba.springJwt.repository.UserRepository;
+import digiload.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -21,3 +21,4 @@ public class UserDetailsServiceImp implements UserDetailsService {
                 .orElseThrow(()-> new UsernameNotFoundException("User not found"));
     }
 }
+

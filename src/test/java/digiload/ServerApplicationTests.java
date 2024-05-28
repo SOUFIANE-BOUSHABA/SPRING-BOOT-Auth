@@ -1,10 +1,10 @@
-package com.helloIftekhar.springJwt;
+package digiload;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringJwtApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {

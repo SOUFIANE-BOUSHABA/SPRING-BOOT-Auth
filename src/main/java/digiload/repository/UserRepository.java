@@ -1,6 +1,6 @@
-package com.boushaba.springJwt.repository;
+package digiload.repository;
 
-import com.boushaba.springJwt.model.User;
+import digiload.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
